@@ -1,0 +1,220 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family:'Times New Roman';
+    background-color: #1a1a1a;
+}
+/*navigation bar*/
+
+header {
+	background-color: #333;
+	color: #fff;
+}
+
+nav {
+	display: flex;
+   	flex-wrap: wrap;
+	align-items: center;
+	padding: 10px;
+	justify-content: space-between;
+}
+ul.menu{
+    display: flex;
+    float: right;
+    align-items: center;
+}
+nav ul {
+	display: flex;
+    flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+}
+nav li {
+    
+	list-style: none;
+   	margin: 0 10px;
+}
+nav a {
+    
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	padding: 10px;
+	transition: all 0.3s ease-in-out;
+}
+nav a:hover{
+    color: rgb(68, 218, 88);;
+}
+
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .dropdown-menu li {
+    display: block;
+  }
+  
+  .dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    color: #333;
+  }
+  
+  .dropdown-toggle:hover + .dropdown-menu,
+  .dropdown-menu:hover {
+    display: block;
+  }  
+
+@media screen and (max-width: 600px) {
+	nav {
+		flex-direction: column;
+		align-items: center;
+        transition: all 0.5s ease-in-out;
+	}
+    nav li {
+		margin: 10px 0;
+        transition: all 0.5s ease-in-out;
+	}
+    ul.menu {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        transition: all 0.5s ease-in-out;
+    }
+    .dropdown-toggle {
+        display: inline-block;
+        width: 100%;
+        text-align: left;
+      }
+    
+      .dropdown-menu {
+        position: static;
+      }
+    
+      .dropdown-menu li a {
+        padding: 5px;
+      }
+    
+      .dropdown-toggle:hover + .dropdown-menu,
+      .dropdown-menu:hover {
+        display: none;
+      }
+}
+/*******************************************************/
+/*content*/
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 960rem; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+  }
+  .content{
+    display: flex;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: 'Times New Roman';
+    font-size: 20px;
+    font-weight: bold;
+    align-content: center;
+    flex-direction: column;
+  }
+  .content h1{
+    font-family: 'Times New Roman';
+    font-weight: lighter;
+    font-size: 80px;
+    color:rgb(68, 218, 88);
+  }
+  .content h2{
+    font-family: 'Times New Roman';
+    color:rgb(68, 218, 88);
+    font-size: 40px;
+    font-weight: lighter;
+  }
+
+
+
+  @media (max-width: 768px) {
+   
+    .container {
+      max-width: 100%;
+      padding: 0 10px;
+      transition: all 0.5s ease-in-out;
+    }
+    .content {
+        font-size: 10px;
+        display: flex;
+        transition: all 0.5s ease-in-out;
+      
+      }
+      .content h2{
+        font-size: 20px;
+        transition: all 0.5s ease-in-out;
+      }
+      .content h1{
+        font-size:40px ;
+        transition: all 0.5s ease-in-out;
+      }
+     
+  }
+  /*****************************************************/
+
+  /*Login page*/
+  .form-container {
+    margin-left: 27rem;
+    display: flex;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.form-container h2{
+    color: white;
+    font-family: 'Times New Roman';
+}
+.form-container label{
+    color: white;
+    font-family: 'Times New Roman';
+
+}
+
+button {
+    background-color: rgb(68, 218, 88);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+button:hover {
+    background-color:#4CAF50 ;
+}
+
+@media screen and (max-width: 780px) {
+    .form-container {
+        padding: 20px;
+        margin-left: 0rem;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
